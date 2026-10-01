@@ -2,6 +2,8 @@
   publish = "."
 
 [[headers]]
-  for = "/assets/*"
+  for = "/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
