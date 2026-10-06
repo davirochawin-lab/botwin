@@ -1,4 +1,4 @@
-# Bot Win Double — site estático
+# Bot Win — site estático
 
 Clone estático (HTML + CSS + JS puros) da página https://botwin.com.br/teste-gratis/
 
