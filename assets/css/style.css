@@ -33,6 +33,7 @@ img { max-width: 100%; height: auto; border: 0; display: inline-block; }
 /* ---------- Layout ---------- */
 .container {
   width: 100%;
+  min-width: 0;
   max-width: 1140px;
   margin: 0 auto;
   display: flex;
@@ -69,8 +70,12 @@ img { max-width: 100%; height: auto; border: 0; display: inline-block; }
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  flex-shrink: 0;
+  isolation: isolate;
+  clip-path: circle(50%);
 }
 .logo {
+  display: block;
   width: 100%; height: 100%;
   object-fit: cover;
   border-radius: 50%;
@@ -84,7 +89,7 @@ img { max-width: 100%; height: auto; border: 0; display: inline-block; }
   font-size: 32px;
   font-weight: 400;
   line-height: 1.24;
-  letter-spacing: -.4px;
+  letter-spacing: 0;
   color: #FFFFFF;
   text-shadow: 0 2px 10px rgba(0,0,0,.6);
 }
@@ -108,9 +113,12 @@ img { max-width: 100%; height: auto; border: 0; display: inline-block; }
   flex-direction: column;
   gap: 14px;
 }
+.steps > .step::marker { content: ""; }
 
 .step {
-  display: flex;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  list-style: none;
   align-items: flex-start;
   gap: 14px;
   background: rgba(255,255,255,.05);
@@ -134,9 +142,9 @@ img { max-width: 100%; height: auto; border: 0; display: inline-block; }
   line-height: 1;
 }
 
-.step__text { color: #ffffff; font-weight: 500; }
+.step__text { min-width: 0; color: #ffffff; font-weight: 500; overflow-wrap: break-word; }
 
-.pair { font-weight: 700; letter-spacing: .5px; }
+.pair { font-weight: 700; letter-spacing: 0; }
 .call { color: #09E80C; font-weight: 700; }
 .put  { color: #FF3B3B; font-weight: 700; }
 .win  { color: #0bef0d; font-weight: 700; }
@@ -176,11 +184,16 @@ img { max-width: 100%; height: auto; border: 0; display: inline-block; }
 
 /* ---------- Botão ---------- */
 .btn-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
   text-align: center;
   margin: 22px 0 0;
 }
 
 .btn {
+  max-width: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -195,7 +208,7 @@ img { max-width: 100%; height: auto; border: 0; display: inline-block; }
   font-size: 16px;
   font-weight: 900;
   line-height: 1.25;
-  letter-spacing: .3px;
+  letter-spacing: 0;
   word-spacing: 2px;
   text-align: center;
   text-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -220,22 +233,18 @@ img { max-width: 100%; height: auto; border: 0; display: inline-block; }
 }
 
 /* ---------- Responsivo ---------- */
-@media (max-width: 1024px) {
-  .container { max-width: 1024px; }
-}
-
 @media (max-width: 767px) {
-  .container { max-width: 767px; }
-
   .section--top { padding: 24px 16px 30px; }
   .section--main { padding: 16px 16px 26px; }
   .section--bottom { padding: 30px 16px 46px; }
 
-  .hero-title { font-size: 25px; letter-spacing: -.2px; }
+  .hero-title { font-size: 25px; line-height: 1.3; overflow-wrap: break-word; }
   .logo-wrap { width: 150px; height: 150px; margin-bottom: 20px; }
 
-  .btn { display: flex; width: 100%; font-size: 14px; padding: 18px 12px; }
+  .btn { display: flex; width: 100%; max-width: 430px; min-height: 56px; font-size: 14px; padding: 18px 12px; }
+  .btn__text { min-width: 0; white-space: normal; }
+  .cta-text { width: 100%; text-align: center; line-height: 1.65; }
 
-  .step { padding: 14px; gap: 10px; }
+  .step { grid-template-columns: 30px minmax(0, 1fr); padding: 14px; gap: 10px; }
   .step__num { width: 30px; height: 30px; font-size: 16px; }
 }
