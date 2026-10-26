@@ -1,4 +1,4 @@
-# Bot Win — Landing EUR/USD
+# Bot Win — Teste Grátis
 
 Site estático (HTML/CSS/JS puro), pronto para GitHub + Netlify.
 
@@ -10,5 +10,5 @@ Site estático (HTML/CSS/JS puro), pronto para GitHub + Netlify.
 ## Meta Pixel
 ID 770626091178291 instalado no <head> (PageView automático). Invisível ao visitante.
 
-## Botões
-Os dois botões apontam para o Telegram: https://t.me/+ITis4GeiufE3NGZh
+## Botão
+Aponta para o Telegram: https://t.me/+ITis4GeiufE3NGZh
