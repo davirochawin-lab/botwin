@@ -83,6 +83,7 @@ img { max-width: 100%; height: auto; border: 0; display: inline-block; }
 .hero-text {
   font-family: "Roboto", Sans-serif;
   font-weight: 500;
+  font-size: 18px;
   color: #FFFEFE;
 }
 .hero-text p { margin: 0; }
@@ -181,7 +182,7 @@ img { max-width: 100%; height: auto; border: 0; display: inline-block; }
   .spacer-40 { height: 0; }
 
   .hero-title { text-align: center; font-size: 36px; line-height: 1.25; overflow-wrap: anywhere; }
-  .hero-text { text-align: left; margin-bottom: 40px; font-size: 15px; }
+  .hero-text { text-align: left; margin-bottom: 40px; font-size: 17px; }
 
   .btn-wrap { margin: -21px 0 20px 0; padding: 0 16px; text-align: center; }
   .btn {
@@ -197,7 +198,7 @@ img { max-width: 100%; height: auto; border: 0; display: inline-block; }
 
 @media (max-width: 480px) {
   .hero-title { font-size: 30px; }
-  .hero-text { font-size: 14px; }
+  .hero-text { font-size: 16px; }
   .btn { font-size: 13px; padding: 16px 10px; }
   .logo { width: 78%; height: 160px; }
   .logo-wrap { margin: 10px 10px 30px; }
